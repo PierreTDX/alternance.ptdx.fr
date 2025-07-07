@@ -1,0 +1,52 @@
+:root {
+  --font-default: var(--font-mona), Arial, Helvetica, sans-serif;
+
+  --background: #1f1d1d;
+  --title: #dddddd;
+  --p: #8f8f8f;
+
+  --max-width: 1280px;
+}
+
+
+body {
+  height: 100%;
+  color: var(--p);
+  background: var(--background);
+  font-family: var(--font-default);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--title);
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
