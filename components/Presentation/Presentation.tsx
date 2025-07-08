@@ -17,7 +17,7 @@ export default function Presentation() {
                 <h1>Développeur <span className="important">Full Stack</span></h1>
                 <h2>React • Node.js • Nest.js</h2>
             </div>
-            <p>Passionné par le développement web moderne, je transforme des idées en applications performantes et intuitives. 20 ans d'expérience en gestion de projets reconvertie en expertise technique.</p>
+            <p>Passionné par le développement web moderne, je transforme des idées en applications performantes et intuitives. 20 ans d’expérience en gestion de projets reconvertie en expertise technique.</p>
             <div className="presentationAction">
                 <button>Voir mes projets <FaArrowRight /></button>
                 <button
