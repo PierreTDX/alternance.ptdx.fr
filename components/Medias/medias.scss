@@ -1,0 +1,16 @@
+.iconsFooter {
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.iconsFooter a {
+    transition: all 0.3s ease-in-out;
+}
+
+.iconsFooter a:hover {
+    color: var(--title);
+    scale: 1.4;
+}
