@@ -1,12 +1,12 @@
 import "./preferredTechno.scss";
-import { FaReact, FaNodeJs, FaGitAlt, FaServer } from "react-icons/fa";
+import { FaReact, FaNodeJs, FaGitAlt, FaServer, FaArrowRight } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
 import { SiMongodb } from "react-icons/si";
 
 
 export default function PreferredTechno() {
     return (
-        <article>
+        <article className="articlePreferredTechno">
             <div>
                 <h2>Technologies Préférées</h2>
                 <p>Une stack moderne pour développer des applications web performantes et évolutives</p>
@@ -39,6 +39,7 @@ export default function PreferredTechno() {
                     </div>
                 </div>
             </div>
+            <button>Voir toutes mes technos <FaArrowRight /></button>
         </article>
     )
 }

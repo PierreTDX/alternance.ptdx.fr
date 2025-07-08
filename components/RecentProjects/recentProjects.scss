@@ -1,4 +1,9 @@
-article {
+.articleRecentProjects {
+    text-align: center;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
 
     .listRecentProjects {
         display: grid;

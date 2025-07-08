@@ -2,7 +2,7 @@ import "./recentProjects.scss";
 
 export default function RecentProjects() {
     return (
-        <article>
+        <article className="articleRecentProjects">
             <div>
                 <h2>Projets récents</h2>
                 <p>Découvrez quelques-uns de mes projets qui démontrent mes compétences techniques et ma créativité</p>

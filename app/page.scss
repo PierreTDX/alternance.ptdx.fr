@@ -12,7 +12,7 @@
 }
 
 @media (max-width: 767px) {
-    .homePresentation {
+    .homePresentationContent {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(2, 1fr);
     }
