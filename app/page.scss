@@ -1,25 +1,28 @@
-.mainContent {
+.sectionContent {
     max-width: var(--max-width);
-    margin: 0 auto;
-    padding: 1rem;
+}
 
-    section {
-        padding: 3rem 0;
-    }
+.homePresentationContent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 2rem;
+    grid-row-gap: 3rem;
+    // align-items: center;
+}
 
+@media (max-width: 767px) {
     .homePresentation {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 1fr;
-        grid-column-gap: 2rem;
-        grid-row-gap: 3rem;
-        // align-items: center;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
     }
+}
 
-    @media (max-width: 767px) {
-        .homePresentation {
-            grid-template-columns: 1fr;
-            grid-template-rows: repeat(2, 1fr);
-        }
-    }
+.PreferredTechno {
+    background-color: var(--importantBg);
+}
+
+.PreferredTechnoContent,
+.recentProjectsContent {
+    width: 100%;
 }
