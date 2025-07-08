@@ -1,0 +1,100 @@
+.cardMe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // border: 1px solid var(--title);
+    border-radius: 20px;
+    padding: 0.5rem;
+    animation: float 6s ease-in-out infinite;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    // box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
+    @keyframes float {
+        0% {
+            transform: translateY(0px);
+        }
+
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        background: linear-gradient(0deg, var(--background), #111111, var(--background));
+        border-radius: 10px 10px 0 0;
+    }
+
+    .cardMeContent {
+        text-align: center;
+
+        h3,
+        h4 {
+            margin: 0.5rem 0;
+        }
+
+        h4 {
+            font-weight: 400;
+        }
+
+        .iconsCardMe {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+
+            svg {
+                // color: #333;
+                transition: transform 0.3s;
+
+                &:hover {
+                    transform: scale(1.2) rotate(10deg);
+                }
+            }
+
+            .react:hover {
+                color: #61DBFB;
+            }
+
+            .javascript:hover {
+                color: #f7df1e;
+            }
+
+            .node:hover {
+                color: #3c873a;
+            }
+
+            .nest:hover {
+                color: #e0234e;
+            }
+
+            .github:hover {
+                color: #ddd;
+            }
+        }
+
+        >div:last-child {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1rem;
+            gap: 1rem;
+
+            div {
+                text-align: center;
+
+                p:first-child {
+                    font-weight: bold;
+                    font-size: 1.2rem;
+                    color: var(--important);
+                }
+
+                p:last-child {
+                    font-size: 0.9rem;
+                    color: #666;
+                }
+            }
+        }
+    }
+}

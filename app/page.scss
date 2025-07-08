@@ -3,8 +3,23 @@
     margin: 0 auto;
     padding: 1rem;
 
-    h1,
-    p {
-        text-align: center;
+    section {
+        padding: 3rem 0;
+    }
+
+    .homePresentation {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 2rem;
+        grid-row-gap: 3rem;
+        align-items: center;
+    }
+
+    @media (max-width: 767px) {
+        .homePresentation {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(2, 1fr);
+        }
     }
 }

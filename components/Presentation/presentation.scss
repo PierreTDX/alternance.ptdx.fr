@@ -1,0 +1,72 @@
+.presentation {
+    display: flex;
+    flex-direction: column;
+    // justify-content: space-between;
+    // align-items: center;
+    // border: 1px solid var(--title);
+    border-radius: 20px;
+    padding: 0.5rem;
+    gap: 1rem;
+
+    .tag {
+        width: fit-content;
+        padding: 0.5rem 1rem;
+        border-radius: 100px;
+        color: var(--important);
+        background-color: var(--importantBg);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .presentationAction {
+        display: flex;
+        gap: 1rem;
+        align-self: flex-end;
+        margin-top: 2rem;
+
+        button {
+            all: unset;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            cursor: pointer;
+            border: 2px solid var(--title);
+
+            font-size: 1rem;
+            font-weight: 600;
+            // background-color: #111111;
+            background: linear-gradient(200deg, var(--background), var(--importantBg));
+
+            color: var(--title);
+
+            transition: transform 0.3s ease-in-out;
+
+            &:hover {
+                transform: scale(1.03);
+            }
+        }
+
+        .lightButton {
+            // background-color: var(--title);
+            background: var(--title);
+
+            color: var(--background);
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                // background-color: #111111;
+                background: linear-gradient(200deg, var(--background), var(--importantBg));
+                color: var(--title);
+            }
+        }
+    }
+
+    .iconsFooter {
+        justify-content: end;
+    }
+}

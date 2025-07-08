@@ -43,7 +43,7 @@ export default function AnimatedTitle() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
         >
-            <FaCode color="#ffffff" /> {text}
+            <FaCode color="#2dd4bf" /> {text}
         </motion.p>
     );
 }
