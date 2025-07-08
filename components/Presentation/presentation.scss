@@ -69,4 +69,11 @@
     .iconsFooter {
         justify-content: end;
     }
+
+    @media (max-width: 767px) {
+        .presentationAction {
+            width: 100%;
+            flex-direction: column;
+        }
+    }
 }
