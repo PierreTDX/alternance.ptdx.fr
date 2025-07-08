@@ -12,7 +12,7 @@ import { FaPhoneSquare } from "react-icons/fa";
 export default function Presentation() {
     return (
         <article className="presentation">
-            <div className="tag"><PiStudentBold /> À la recherche d'une alternance</div>
+            <div className="tag"><PiStudentBold /> À la recherche d’une alternance</div>
             <div>
                 <h1>Développeur <span className="important">Full Stack</span></h1>
                 <h2>React • Node.js • Nest.js</h2>
