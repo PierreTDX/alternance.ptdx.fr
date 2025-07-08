@@ -39,7 +39,6 @@ export default function Header() {
     return (
         <header>
             <div className="headerContent" ref={menuRef}>
-                {/* <p className="siteTitle"><FaCode color="#ffffff" /> ptdx</p> */}
                 <AnimatedTitle />
 
                 <button

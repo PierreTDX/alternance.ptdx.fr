@@ -32,6 +32,10 @@
         justify-content: end;
     }
 
+    button {
+        flex: 1 1 auto;
+    }
+
     // @media (max-width: 767px) {
     //     .presentationAction {
     //         width: 100%;
