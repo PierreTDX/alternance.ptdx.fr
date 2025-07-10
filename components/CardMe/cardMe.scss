@@ -26,6 +26,7 @@
         object-fit: cover;
         background: linear-gradient(0deg, var(--background), #111111, var(--background));
         border-radius: 10px 10px 0 0;
+        filter: brightness(0.8);
     }
 
     .cardMeContent {
