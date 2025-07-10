@@ -38,10 +38,21 @@ export default function CardProject({ project }: Props) {
                 ))}
             </ul>
             <div className="cardLinks">
-                <a href={project.github} target="_blank" rel="noopener noreferrer">
+                <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                >
                     <IoLogoGithub size={28} />
                 </a>
-                <a href={project.site} target="_blank" rel="noopener noreferrer" className="site">
+                <a
+                    href={project.site}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="site"
+                    onClick={(e) => e.stopPropagation()}
+                >
                     <FaExternalLinkAlt size={24} />
                 </a>
             </div>

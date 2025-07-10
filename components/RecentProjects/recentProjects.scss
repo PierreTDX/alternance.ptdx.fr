@@ -16,8 +16,8 @@
 
     @media (max-width: 767px) {
         .listRecentProjects {
-            grid-template-columns: 1fr;
-            grid-template-rows: repeat(2, 1fr);
+            display: flex;
+            flex-direction: column;
         }
     }
 

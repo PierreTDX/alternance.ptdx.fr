@@ -28,9 +28,7 @@ export const projectsData: Project[] = [
         title: "SportSee",
         slug: "sportsee",
         description:
-            "Application de suivi sportif qui affiche des  des graphiques interactifs, connectée à une API backend que j'ai déployée pour fournir les données en temps réel.",
-        // description:
-        //     "Application de suivi sportif qui affiche des statistiques personnalisées (sessions, calories, performances). Elle utilise React avec la bibliothèque Recharts pour des graphiques interactifs, connectée à une API backend que j'ai déployée pour fournir les données en temps réel.",
+            "Application de suivi sportif qui affiche des statistiques personnalisées (sessions, calories, performances). Elle utilise React avec la bibliothèque Recharts pour des graphiques interactifs, connectée à une API backend que j'ai déployée pour fournir les données en temps réel.",
         image: "/images/Projects/sportsee.png",
         tags: ["React", "Recharts", "API REST", "Sccs"],
         github: "https://github.com/PierreTDX/P12_SportSee_FRONT_OC",
