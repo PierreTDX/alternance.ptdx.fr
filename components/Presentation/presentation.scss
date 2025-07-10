@@ -9,17 +9,6 @@
     padding: 0.5rem;
     gap: 1rem;
 
-    .tag {
-        width: fit-content;
-        padding: 0.5rem 1rem;
-        border-radius: 100px;
-        color: var(--important);
-        background-color: var(--importantBg);
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-    }
-
     .presentationAction {
         display: flex;
         gap: 1rem;

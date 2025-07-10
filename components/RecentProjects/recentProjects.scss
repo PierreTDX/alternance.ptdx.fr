@@ -3,6 +3,7 @@
     padding: 0.5rem;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 3rem;
 
     .listRecentProjects {
@@ -11,6 +12,13 @@
         grid-template-rows: 1fr;
         grid-column-gap: 2rem;
         grid-row-gap: 3rem;
-        // align-items: center;
     }
+
+    @media (max-width: 767px) {
+        .listRecentProjects {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(2, 1fr);
+        }
+    }
+
 }

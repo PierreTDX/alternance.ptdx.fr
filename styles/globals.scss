@@ -76,6 +76,7 @@ button {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+  width: fit-content;
 
   padding: 1rem 2rem;
   border-radius: 8px;
@@ -105,4 +106,15 @@ button {
     background: linear-gradient(200deg, var(--background), var(--importantBg));
     color: var(--title);
   }
+}
+
+.tag {
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  border-radius: 100px;
+  color: var(--important);
+  background-color: var(--importantBg);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
