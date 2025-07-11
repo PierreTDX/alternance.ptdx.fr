@@ -45,7 +45,7 @@ export default function PreferredTechno() {
             </ul>
 
             <button aria-label="Voir toutes mes technologies">
-                Voir toutes mes technos <FaArrowRight aria-hidden="true" role="presentation" />
+                Voir toutes mes technos <FaArrowRight aria-hidden="true" />
             </button>
         </article>
     );

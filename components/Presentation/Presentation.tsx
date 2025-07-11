@@ -29,7 +29,7 @@ export default function Presentation() {
                     aria-label="Voir mes projets"
                     onClick={() => { window.location.href = "/projets" }}
                 >
-                    Voir mes projets <FaArrowRight aria-hidden="true" role="presentation" />
+                    Voir mes projets <FaArrowRight aria-hidden="true" />
                 </button>
 
                 <button
@@ -38,7 +38,7 @@ export default function Presentation() {
                     aria-label="Me contacter par email"
                     onClick={() => (window.location.href = "mailto:pierre.tondeux@gmail.com")}
                 >
-                    Me contacter <MdEmail size={20} aria-hidden="true" role="presentation" />
+                    Me contacter <MdEmail size={20} aria-hidden="true" />
                 </button>
             </div>
 

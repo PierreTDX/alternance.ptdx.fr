@@ -34,16 +34,16 @@ export default function AnimatedTitle() {
     }, [showFull]);
 
     return (
-        <motion.p
+        <motion.h1
             className="siteTitle"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
             aria-label="Nom du site : Pierre Tondeux à la recher d'une alternance"
-            role="logo"
+            role="header"
             aria-level={1}
         >
-            <FaCode color="#2dd4bf" aria-hidden="true" role="presentation" /> {text}
-        </motion.p>
+            <FaCode color="#2dd4bf" aria-hidden="true" /> {text}
+        </motion.h1>
     );
 }
