@@ -24,7 +24,7 @@ export default function CardProject({ project }: Props) {
     return (
         <article
             className="cardProject"
-            role="Link"
+            role="link"
             tabIndex={0}
             aria-labelledby={`project-title-${project.id}`}
             aria-describedby={`project-description-${project.id}`}
