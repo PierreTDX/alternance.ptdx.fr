@@ -4,12 +4,11 @@ import "./header.scss";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import AnimatedTitle from "../AnimatedTitle/AnimatedTitle";
-// import { FaCode } from "react-icons/fa";
 
 export default function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
     const menuRef = useRef<HTMLDivElement>(null);
-    const pathname = usePathname(); // ← ici on récupère le chemin actuel
+    const pathname = usePathname();
 
     const toggleMenu = () => setMenuOpen(!menuOpen);
 
@@ -45,21 +44,28 @@ export default function Header() {
                     className={`burger ${menuOpen ? "open" : ""}`}
                     aria-label={menuOpen ? "Fermer le menu" : "Ouvrir le menu"}
                     aria-expanded={menuOpen}
+                    aria-controls="main-navigation"
                     onClick={toggleMenu}
                     type="button"
                 >
-                    <span />
-                    <span />
-                    <span />
+                    <span aria-hidden="true" />
+                    <span aria-hidden="true" />
+                    <span aria-hidden="true" />
                 </button>
 
-                <nav className={menuOpen ? "open" : ""}>
+                <nav
+                    id="main-navigation"
+                    className={menuOpen ? "open" : ""}
+                    role="navigation"
+                    aria-label="Menu principal"
+                >
                     <ul>
                         {navLinks.map(({ href, label }) => (
                             <li key={href}>
                                 <Link
                                     href={href}
                                     className={pathname === href ? "active" : ""}
+                                    aria-current={pathname === href ? "page" : undefined}
                                     onClick={() => setMenuOpen(false)}
                                 >
                                     {label}

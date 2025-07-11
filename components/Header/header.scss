@@ -36,6 +36,12 @@ header {
                         transition: color 0.2s;
                         padding: 0.5rem 1rem;
 
+                        &:focus-visible {
+                            outline: 5px solid var(--important);
+                            outline-offset: 5px;
+                            border-radius: 10px;
+                        }
+
                         &:hover {
                             color: var(--important);
                             background-color: var(--importantBg);

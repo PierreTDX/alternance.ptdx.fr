@@ -91,6 +91,11 @@ button {
 
   transition: transform 0.3s ease-in-out;
 
+  &:focus-visible {
+    outline: 5px solid var(--important);
+    outline-offset: 5px;
+  }
+
   &:hover {
     transform: scale(1.03);
   }

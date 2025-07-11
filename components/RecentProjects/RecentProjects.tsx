@@ -1,3 +1,4 @@
+'use client';
 import "./recentProjects.scss";
 import CardProject from "../CardProject/CardProject";
 import { projectsData } from "@/data/projectsData";
@@ -9,23 +10,28 @@ export default function RecentProjects() {
         .slice(0, 3); // prend les 3 premiers
 
     return (
-        <>
-            <div className="articleRecentProjects">
-                <div>
-                    <h2>Projets récents</h2>
-                    <p>
-                        Découvrez quelques-uns de mes projets qui démontrent mes compétences
-                        techniques et ma créativité
-                    </p>
-                </div>
-                <div className="listRecentProjects">
-                    {sortedProjects.map((project) => (
-                        <CardProject key={project.id} project={project} />
-                    ))}
-                </div>
-                <button>Voir tous mes projets <FaArrowRight /></button>
+        <div className="articleRecentProjects" aria-label="Projets récents">
+            <div>
+                <h2>Projets récents</h2>
+                <p>
+                    Découvrez quelques-uns de mes projets qui démontrent mes compétences
+                    techniques et ma créativité.
+                </p>
             </div>
-        </>
 
+            <div className="listRecentProjects">
+                {sortedProjects.map((project) => (
+                    <CardProject key={project.id} project={project} />
+                ))}
+            </div>
+
+            <button
+                type="button"
+                aria-label="Voir tous mes projets"
+                onClick={() => { window.location.href = "/projets" }}
+            >
+                Voir tous mes projets <FaArrowRight aria-hidden="true" />
+            </button>
+        </div>
     );
 }

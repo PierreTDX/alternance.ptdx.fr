@@ -7,10 +7,9 @@ const fullText = "Pierre Tondeux";
 const shortText = "ptdx";
 
 export default function AnimatedTitle() {
-    const [showFull, setShowFull] = useState(false); // ← Commence par shortText
-    const [text, setText] = useState(shortText);     // ← Texte initial = ptdx
+    const [showFull, setShowFull] = useState(false);
+    const [text, setText] = useState(shortText);
 
-    // Alterne automatiquement toutes les 4 secondes
     useEffect(() => {
         const interval = setInterval(() => {
             setShowFull((prev) => !prev);
@@ -18,7 +17,6 @@ export default function AnimatedTitle() {
         return () => clearInterval(interval);
     }, []);
 
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     useEffect(() => {
         const targetText = showFull ? fullText : shortText;
         const maxLength = Math.max(fullText.length, shortText.length);
@@ -27,8 +25,7 @@ export default function AnimatedTitle() {
 
         const interval = setInterval(() => {
             if (i >= maxLength) return clearInterval(interval);
-            const next =
-                targetText.slice(0, i + 1) + current.slice(i + 1);
+            const next = targetText.slice(0, i + 1) + current.slice(i + 1);
             setText(next);
             i++;
         }, 50);
@@ -42,8 +39,11 @@ export default function AnimatedTitle() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
+            aria-label="Nom du site : Pierre Tondeux"
+            role="heading"
+            aria-level={1}
         >
-            <FaCode color="#2dd4bf" /> {text}
+            <FaCode color="#2dd4bf" aria-hidden="true" /> {text}
         </motion.p>
     );
 }
