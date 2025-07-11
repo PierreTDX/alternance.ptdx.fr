@@ -30,7 +30,7 @@ export default function RecentProjects() {
                 aria-label="Voir tous mes projets"
                 onClick={() => { window.location.href = "/projets" }}
             >
-                Voir tous mes projets <FaArrowRight aria-hidden="true" />
+                Voir tous mes projets <FaArrowRight aria-hidden="true" role="presentation" />
             </button>
         </div>
     );

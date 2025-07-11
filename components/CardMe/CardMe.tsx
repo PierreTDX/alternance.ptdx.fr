@@ -21,11 +21,11 @@ export default function CardMe() {
                 <h4>Développeur <span className="important">Full Stack</span></h4>
 
                 <div className="iconsCardMe" aria-label="Compétences techniques principales">
-                    <FaReact size={24} className="react" title="React" aria-label="React" />
-                    <IoLogoJavascript size={24} className="javascript" title="JavaScript" aria-label="JavaScript" />
-                    <FaNodeJs size={24} className="node" title="Node.js" aria-label="Node.js" />
-                    <SiNestjs size={24} className="nest" title="NestJS" aria-label="NestJS" />
-                    <IoLogoGithub size={24} className="github" title="GitHub" aria-label="GitHub" />
+                    <FaReact size={24} className="react" title="React" aria-label="React" role="presentation" />
+                    <IoLogoJavascript size={24} className="javascript" title="JavaScript" aria-label="JavaScript" role="presentation" />
+                    <FaNodeJs size={24} className="node" title="Node.js" aria-label="Node.js" role="presentation" />
+                    <SiNestjs size={24} className="nest" title="NestJS" aria-label="NestJS" role="presentation" />
+                    <IoLogoGithub size={24} className="github" title="GitHub" aria-label="GitHub" role="presentation" />
                 </div>
                 <div className="stats" aria-label="Statistiques personnelles">
                     <div>

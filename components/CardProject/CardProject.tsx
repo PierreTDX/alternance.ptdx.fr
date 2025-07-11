@@ -24,7 +24,7 @@ export default function CardProject({ project }: Props) {
     return (
         <article
             className="cardProject"
-            role="link"
+            role="button"
             tabIndex={0}
             aria-labelledby={`project-title-${project.id}`}
             aria-describedby={`project-description-${project.id}`}
@@ -59,7 +59,7 @@ export default function CardProject({ project }: Props) {
                     aria-label={`Code source de ${project.title} sur GitHub, dans une autre fenêtre`}
                     onClick={(e) => e.stopPropagation()}
                 >
-                    <IoLogoGithub size={28} />
+                    <IoLogoGithub size={28} role="presentation" />
                 </a>
                 <a
                     href={project.site}
@@ -69,7 +69,7 @@ export default function CardProject({ project }: Props) {
                     aria-label={`Visiter le site ${project.title}, dans une autre fenêtre`}
                     onClick={(e) => e.stopPropagation()}
                 >
-                    <FaExternalLinkAlt size={24} />
+                    <FaExternalLinkAlt size={24} role="presentation" />
                 </a>
             </div>
         </article>

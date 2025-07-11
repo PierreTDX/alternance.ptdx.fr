@@ -39,11 +39,11 @@ export default function AnimatedTitle() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
-            aria-label="Nom du site : Pierre Tondeux"
-            role="heading"
+            aria-label="Nom du site : Pierre Tondeux à la recher d'une alternance"
+            role="logo"
             aria-level={1}
         >
-            <FaCode color="#2dd4bf" aria-hidden="true" /> {text}
+            <FaCode color="#2dd4bf" aria-hidden="true" role="presentation" /> {text}
         </motion.p>
     );
 }
