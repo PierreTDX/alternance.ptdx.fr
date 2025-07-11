@@ -1,8 +1,3 @@
-.sectionContent {
-    max-width: var(--max-width);
-    margin: 0 1rem;
-}
-
 .homePresentationContent {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -19,7 +14,7 @@
     }
 }
 
-.PreferredTechno {
+.preferredTechno {
     background-color: var(--importantBg);
 
     p {
@@ -27,7 +22,7 @@
     }
 }
 
-.PreferredTechnoContent,
+.preferredTechnoContent,
 .recentProjectsContent {
     width: calc(100% - 2rem);
 }

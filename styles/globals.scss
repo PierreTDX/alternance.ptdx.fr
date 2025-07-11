@@ -123,3 +123,8 @@ button {
   align-items: center;
   gap: 0.5rem;
 }
+
+.sectionContent {
+  max-width: var(--max-width);
+  margin: 0 1rem;
+}

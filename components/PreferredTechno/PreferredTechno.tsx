@@ -1,3 +1,4 @@
+'use client';
 import "./preferredTechno.scss";
 import { FaReact, FaNodeJs, FaGitAlt, FaServer, FaArrowRight } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
@@ -44,7 +45,11 @@ export default function PreferredTechno() {
                 </li>
             </ul>
 
-            <button aria-label="Voir toutes mes technologies">
+            <button
+                type="button"
+                aria-label="Voir toutes mes technologies"
+                onClick={() => { window.location.href = "/apropos" }}
+            >
                 Voir toutes mes technos <FaArrowRight aria-hidden="true" />
             </button>
         </article>

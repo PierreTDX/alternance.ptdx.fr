@@ -53,7 +53,7 @@ export const projectsData: Project[] = [
         slug: "kaza",
         description:
             "Plateforme de location immobilière avec un design responsive réalisée en React et React Router. Les utilisateurs peuvent consulter les annonces, voir les détails des logements et naviguer facilement entre les différentes pages.",
-        image: "/images/Projects/lespetitsplats.png",
+        image: "/images/Projects/kasa.png",
         tags: ["xxx", "xxxx", "xxxxx"],
         github: "https://github.com/PierreTDX/P11_Kasa_OC",
         site: "https://p11-kasa-oc.vercel.app/",
@@ -64,7 +64,7 @@ export const projectsData: Project[] = [
         slug: "hrnet",
         description:
             "Application de gestion des ressources humaines qui permet d’ajouter et de lister des employés. Développée en React avec un formulaire de création d’employé et un tableau de visualisation, elle facilite la gestion interne du personnel.",
-        image: "/images/Projects/lespetitsplats.png",
+        image: "/images/Projects/hrnet.png",
         tags: ["xxx", "xxxx", "xxxxx"],
         github: "https://github.com/PierreTDX/P14_HRnet_OC",
         site: "https://p14-hrnet-oc.vercel.app/",

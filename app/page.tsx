@@ -13,8 +13,8 @@ export default function Home() {
           <CardMe />
         </div>
       </section>
-      <section className="PreferredTechno">
-        <div className="sectionContent PreferredTechnoContent">
+      <section className="preferredTechno">
+        <div className="sectionContent preferredTechnoContent">
           <PreferredTechno />
         </div>
       </section>

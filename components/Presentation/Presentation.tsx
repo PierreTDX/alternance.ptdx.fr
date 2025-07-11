@@ -36,7 +36,7 @@ export default function Presentation() {
                     type="button"
                     className="lightButton"
                     aria-label="Me contacter par email"
-                    onClick={() => (window.location.href = "mailto:pierre.tondeux@gmail.com")}
+                    onClick={() => { window.location.href = "/contact" }}
                 >
                     Me contacter <MdEmail size={20} aria-hidden="true" />
                 </button>

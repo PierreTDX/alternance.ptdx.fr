@@ -23,7 +23,7 @@ export default function CardProject({ project }: Props) {
 
     return (
         <article
-            className="cardProject"
+            className="cardProject cardProjectHorizontal"
             role="link"
             tabIndex={0}
             aria-labelledby={`project-title-${project.id}`}
@@ -40,38 +40,41 @@ export default function CardProject({ project }: Props) {
                     className="cardImage"
                 />
             </div>
-            <h3 id={`project-title-${project.id}`}>{project.title}</h3>
-            <p id={`project-description-${project.id}`}>{project.description}</p>
+            <div className="cardProjectDescription">
+                <h3 id={`project-title-${project.id}`}>{project.title}</h3>
+                <p id={`project-description-${project.id}`}>{project.description}</p>
 
-            <ul className="tags" aria-label="Technologies utilisées">
-                {project.tags.map((tag, index) => (
-                    <li key={index} className="tag">
-                        {tag}
-                    </li>
-                ))}
-            </ul>
+                <ul className="tags" aria-label="Technologies utilisées">
+                    {project.tags.map((tag, index) => (
+                        <li key={index} className="tag">
+                            {tag}
+                        </li>
+                    ))}
+                </ul>
 
-            <div className="cardLinks">
-                <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`Code source de ${project.title} sur GitHub, dans une autre fenêtre`}
-                    onClick={(e) => e.stopPropagation()}
-                >
-                    <IoLogoGithub size={28} role="presentation" />
-                </a>
-                <a
-                    href={project.site}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="site"
-                    aria-label={`Visiter le site ${project.title}, dans une autre fenêtre`}
-                    onClick={(e) => e.stopPropagation()}
-                >
-                    <FaExternalLinkAlt size={24} role="presentation" />
-                </a>
+                <div className="cardLinks">
+                    <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`Code source de ${project.title} sur GitHub, dans une autre fenêtre`}
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        <IoLogoGithub size={28} role="presentation" />
+                    </a>
+                    <a
+                        href={project.site}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="site"
+                        aria-label={`Visiter le site ${project.title}, dans une autre fenêtre`}
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        <FaExternalLinkAlt size={24} role="presentation" />
+                    </a>
+                </div>
             </div>
+
         </article>
     );
 }
