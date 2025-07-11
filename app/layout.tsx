@@ -28,7 +28,7 @@ const monaSans = localFont({
 
 export const metadata = {
   title: "Pierre Tondeux Dev Full Stack",
-  description: "Recherche alternance pour Mastère Expert en Développement Full Stack",
+  description: "Pierre TONDEUX recherche une alternance dans le cadre d'un Mastère Expert en Développement Full Stack",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
