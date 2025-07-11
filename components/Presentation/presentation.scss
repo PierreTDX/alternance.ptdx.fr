@@ -2,9 +2,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    // justify-content: space-between;
-    // align-items: center;
-    // border: 1px solid var(--title);
     border-radius: 20px;
     padding: 0.5rem;
     gap: 1rem;
@@ -18,17 +15,11 @@
     }
 
     .iconsFooter {
-        justify-content: end;
+        justify-items: end;
     }
 
     button {
         flex: 1 1 auto;
     }
 
-    // @media (max-width: 767px) {
-    //     .presentationAction {
-    //         width: 100%;
-    //         flex-direction: column;
-    //     }
-    // }
 }
