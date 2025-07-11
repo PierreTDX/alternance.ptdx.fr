@@ -2,6 +2,7 @@ import "./../styles/globals.scss";
 import localFont from "next/font/local";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
+import Script from "next/script"; // ⬅️ ajoute ceci
 
 // Déclaration de Mona Sans
 const monaSans = localFont({
@@ -23,17 +24,33 @@ const monaSans = localFont({
     },
   ],
   display: "swap",
-  variable: "--font-mona", // nom de la variable CSS
+  variable: "--font-mona",
 });
 
 export const metadata = {
   title: "Pierre Tondeux Dev Full Stack",
-  description: "Pierre TONDEUX recherche une alternance dans le cadre d'un Mastère Expert en Développement Full Stack",
+  description:
+    "Pierre TONDEUX recherche une alternance dans le cadre d'un Mastère Expert en Développement Full Stack",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="fr" className={monaSans.variable}>
+      <head>
+        {/* Balise Google Analytics */}
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-P01YGND3SM"
+        />
+        <Script id="google-analytics">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-P01YGND3SM');
+          `}
+        </Script>
+      </head>
       <body className="layout">
         <Header />
         <main>{children}</main>
