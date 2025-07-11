@@ -14,9 +14,9 @@ export default function AllProjects() {
                     <h1>
                         Mes <span className="important">Projets</span>
                     </h1>
-                    <p>
+                    <h2>
                         Découvrez une sélection de mes réalisations techniques, alliant créativité et expertise en développement web
-                    </p>
+                    </h2>
                 </div>
                 <div className="listAllProjects">
                     {sortedProjects.map((project) => (
