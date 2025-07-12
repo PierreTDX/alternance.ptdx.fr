@@ -7,7 +7,7 @@ import UnderConstruction from "@/components/UnderConstruction/UnderConstruction"
 export default function Contact() {
     return (
         <>
-            <section>
+            <section className="headTitle">
                 <h1>
                     Prenons <span className="important">Contact</span>
                 </h1>

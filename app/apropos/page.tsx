@@ -5,7 +5,7 @@ import UnderConstruction from "@/components/UnderConstruction/UnderConstruction"
 export default function About() {
     return (
         <>
-            <section>
+            <section className="headTitle">
                 <h1>
                     À propos de <span className="important">moi</span>
                 </h1>

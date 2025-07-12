@@ -136,3 +136,11 @@ section {
   max-width: var(--max-width);
   margin: 0 1rem;
 }
+
+.headTitle {
+
+  h1,
+  p {
+    text-align: center;
+  }
+}

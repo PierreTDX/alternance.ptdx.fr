@@ -14,7 +14,7 @@ export default function ReadyToCollaborate() {
             <div>
                 <h2 id="ready-to-collaborate">Intéressé par mon profil ?</h2>
                 <p>
-                    Un projet? Avez vous penser à l’alternance? Je suis ouvert à toutes les opportunités qui me permettront de grandir et d’apporter ma valeur ajoutée.
+                    Un projet? Avez-vous pensé à l’alternance? Je suis ouvert à toutes les opportunités qui me permettront de grandir et d’apporter ma valeur ajoutée.
                 </p>
             </div>
 
