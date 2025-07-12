@@ -1,0 +1,17 @@
+.underConstruction {
+    background-color: rgb(108, 148, 28);
+
+    p {
+        color: var(--background);
+    }
+}
+
+.articleUnderConstruction {
+    text-align: center;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+
+}

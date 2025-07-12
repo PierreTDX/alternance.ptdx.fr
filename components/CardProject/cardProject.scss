@@ -9,7 +9,10 @@
     gap: 0.5rem;
     min-height: 100%;
     position: relative;
-    cursor: pointer;
+
+    &.clickable {
+        cursor: pointer;
+    }
 
     &:focus-visible {
         outline: 5px solid var(--important);

@@ -104,7 +104,7 @@ export const projectsData: Project[] = [
         image: "/images/Projects/billed.png",
         tags: ["Jest", "tests End-to-End", "Débogage", "Chrome Debugger"],
         github: "https://github.com/PierreTDX/P9_Billed_FRONT_OC",
-        site: "/images/Projects/billedcoverage.png",
+        site: "",
         date: "2025-04-30",
     },
     {
