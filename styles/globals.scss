@@ -138,9 +138,11 @@ section {
 }
 
 .headTitle {
+  padding-bottom: 0;
 
   h1,
   p {
     text-align: center;
+    padding-inline: 0.5rem;
   }
 }

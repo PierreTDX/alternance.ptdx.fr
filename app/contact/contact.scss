@@ -1,7 +1,29 @@
+.contacContent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 2rem;
+    grid-row-gap: 3rem;
+    // align-items: center;
+}
+
+@media (max-width: 767px) {
+    .contacContent {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-rows: unset;
+    }
+}
+
 .readyToCollaborate {
     background-color: var(--importantBg);
 
     p {
         color: #a3a3a3;
     }
+}
+
+
+.contacContent {
+    width: calc(100% - 2rem);
 }

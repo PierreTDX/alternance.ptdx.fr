@@ -2,7 +2,6 @@ import "./contact.scss";
 import ContactMe from "@/components/ContactMe/ContactMe";
 import SendMeEmail from "@/components/SendMeEmail/SendMeEmail";
 import ReadyToCollaborate from "@/components/ReadyToCollaborate/ReadyToCollaborate";
-import UnderConstruction from "@/components/UnderConstruction/UnderConstruction";
 
 export default function Contact() {
     return (
@@ -19,26 +18,14 @@ export default function Contact() {
                 </p>
             </section>
             <section className="contact">
-                <div className="sectionContent contactMeContent">
+                <div className="sectionContent contacContent">
                     <ContactMe />
-                </div>
-            </section>
-            <section className="interestedInMyProfile">
-                <div className="sectionContent sendMeEmailContent">
                     <SendMeEmail />
                 </div>
             </section>
             <section className="readyToCollaborate">
                 <div className="sectionContent readyToCollaborateContent">
                     <ReadyToCollaborate />
-                </div>
-            </section>
-            <section>
-
-            </section>
-            <section className="underConstruction">
-                <div className="sectionContent underConstructionContent">
-                    <UnderConstruction />
                 </div>
             </section>
         </>
