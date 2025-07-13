@@ -5,7 +5,7 @@ export async function POST(request: Request) {
 
     try {
         const data = await request.json();
-        console.log('✅ Données reçues :', data);
+        console.log('✅ Super données reçues :', data);
 
         const { name, email, phone, subject, message } = data;
 
