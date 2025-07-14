@@ -45,14 +45,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta property="og:title" content="Pierre Tondeux Dev Full Stack" />
         <meta property="og:description" content="Pierre TONDEUX, Développeur Full Stack motivé à rejoindre une équipe en alternance dans le cadre d’un Mastère Expert en Développement Full Stack. Technologies : React, Javascript, TypeScript, Node.js, NestJS. Disponible dès maintenant." />
         <meta property="og:image" content="https://alternance.ptdx.fr/images/alternanceptdx.png" />
+        <meta property="og:image:alt" content="Développeur full stack sur alternance.ptdx.fr de Pierre Tondeux" />
         <meta property="og:url" content="https://alternance.ptdx.fr" />
         <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Pierre Tondeux | Développeur Full Stack" />
+        <meta property="og:locale" content="fr_FR" />
+        <meta property="fb:app_id" content="751029370648279" />
 
         {/* Balises Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Pierre Tondeux Dev Full Stack" />
         <meta name="twitter:description" content="Pierre TONDEUX, Développeur Full Stack motivé à rejoindre une équipe en alternance dans le cadre d’un Mastère Expert en Développement Full Stack. Technologies : React, Javascript, TypeScript, Node.js, NestJS. Disponible dès maintenant." />
         <meta name="twitter:image" content="https://alternance.ptdx.fr/images/alternanceptdx.png" />
+        <meta name="twitter:image:alt" content="Développeur Full Stack – alternance.ptdx.fr de Pierre Tondeux" />
 
         {/* Balise Google Analytics */}
         <Script
