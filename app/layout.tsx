@@ -72,6 +72,30 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             gtag('config', 'G-P01YGND3SM');
           `}
         </Script>
+
+        {/* schema.org */}
+        <Script type="application/ld+json" id="ld-json-person">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Person",
+            name: "Pierre Tondeux",
+            url: "https://alternance.ptdx.fr",
+            image: "https://alternance.ptdx.fr/images/alternanceptdx.png",
+            sameAs: [
+              "https://github.com/PierreTDX",
+              "https://www.linkedin.com/in/pierre-tondeux/"
+            ],
+            jobTitle: "Développeur Full Stack",
+            worksFor: {
+              "@type": "Organization",
+              name: "Freelance"
+            },
+            description:
+              "Développeur Full Stack en recherche d’une alternance dans le cadre d’un Mastère Expert en Développement Full Stack. Technologies : React, TypeScript, Node.js, NestJS.",
+            email: "mailto:pierre.tondeux@gmail.com"
+          })}
+        </Script>
+
       </head>
       <body className="layout">
         <Header />
