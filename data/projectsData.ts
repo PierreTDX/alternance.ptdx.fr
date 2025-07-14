@@ -138,7 +138,7 @@ export const projectsData: Project[] = [
         description:
             "OhMyFood – Site mobile-first avec animations CSS : j’ai développé un site responsive listant les menus de 4 restaurants gastronomiques pour la startup OhMyFood. En suivant des maquettes Figma, j’ai mis en œuvre une approche mobile first et intégré des animations CSS fluides (chargement, transitions, interactions) pour améliorer l’expérience utilisateur. Le projet a été réalisé en HTML, SCSS et CSS3, avec un soin particulier apporté au responsive design et aux détails visuels.",
         image: "/images/Projects/ohmyfood.png",
-        tags: ["Html", "css", "Sass"],
+        tags: ["Html", "Css", "Sass"],
         github: "https://github.com/PierreTDX/P3_ohmyfood_OC",
         site: "https://pierretdx.github.io/P3_ohmyfood_OC/",
         date: "2025-04-30",
@@ -148,7 +148,7 @@ export const projectsData: Project[] = [
         title: "Booki",
         slug: "booki",
         description:
-            "Booki – Intégration HTML/CSS d’une page d’accueil responsive : dans le cadre de ma première mission chez la OpenClassroom, j’ai intégré la page d’accueil d’un site de recherche d’hébergements et d’activités. À partir de maquettes Figma et d’un brief technique, j’ai codé l’ensemble de l’interface en HTML5 et CSS3, en respectant les bonnes pratiques de structuration sémantique, de responsive design et de compatibilité multi-écrans. Le projet respecte une architecture de fichiers professionnelle, sans framework ni JavaScript.",
+            "Booki – Intégration HTML/CSS d’une page d’accueil responsive : dans le cadre de ma première mission chez OpenClassrooms, j’ai intégré la page d’accueil d’un site de recherche d’hébergements et d’activités. À partir de maquettes Figma et d’un brief technique, j’ai codé l’ensemble de l’interface en HTML5 et CSS3, en respectant les bonnes pratiques de structuration sémantique, de responsive design et de compatibilité multi-écrans. Le projet respecte une architecture de fichiers professionnelle, sans framework ni JavaScript.",
         image: "/images/Projects/booki.png",
         tags: ["Html", "Css", "Figma"],
         github: "https://github.com/PierreTDX/P2_booki_OC",

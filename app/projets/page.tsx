@@ -5,6 +5,14 @@ import InterestedInMyProfile from "@/components/InterestedInMyProfile/Interested
 export default function Projects() {
     return (
         <>
+            <section className="headTitle">
+                <h1>
+                    Mes <span className="important">Projets</span>
+                </h1>
+                <h2>
+                    Découvrez une sélection de mes réalisations techniques, alliant créativité et expertise en développement web
+                </h2>
+            </section>
             <section className="projects">
                 <div className="sectionContent projectsContent">
                     <AllProjects />

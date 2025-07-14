@@ -1,7 +1,16 @@
 .interestedInMyProfile {
     background-color: var(--importantBg);
 
+
     p {
         color: #a3a3a3;
+    }
+}
+
+.headTitle {
+    h2 {
+        font-size: 16px;
+        font-weight: 400;
+        color: var(--p);
     }
 }

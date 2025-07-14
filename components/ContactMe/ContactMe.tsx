@@ -1,18 +1,18 @@
 'use client';
 import "./contactMe.scss";
 import { SiMaildotru } from "react-icons/si";
-import { IoLogoGithub, IoLogoLinkedin } from 'react-icons/io';
-import { FaPhoneSquare, FaLightbulb, FaCheckCircle } from 'react-icons/fa';
+import { IoLogoGithub } from 'react-icons/io';
+import { FaPhoneSquare, FaLightbulb, FaCheckCircle, FaArrowCircleDown, FaLinkedin } from 'react-icons/fa';
 import { PiReadCvLogoFill } from 'react-icons/pi';
 import { MdEmail } from "react-icons/md";
-import { FaArrowCircleDown } from "react-icons/fa";
+import { FaLocationDot } from "react-icons/fa6";
 
 
 export default function ContactMe() {
     return (
         <>
             <article className="articleContactMe">
-                <h2><MdEmail className="iconContact" size={46} role="presentation" /> Me Contacter</h2>
+                <h2><div><MdEmail className="iconContact" size={46} role="presentation" /></div> Me Contacter</h2>
                 <ul>
                     <li>
                         <div className="iconLiContact">
@@ -39,7 +39,7 @@ export default function ContactMe() {
                     </li>
                     <li>
                         <div className="iconLiContact">
-                            <IoLogoLinkedin size={28} role="presentation" />
+                            <FaLinkedin size={24} role="presentation" />
                         </div>
                         <a href="https://www.linkedin.com/in/pierre-tondeux/"
                             aria-label="Profil LinkedIn de Pierre Tondeux, dans une autre fenêtre"
@@ -63,6 +63,16 @@ export default function ContactMe() {
                             <p className="detailContact">PierreTDX</p>
                         </a>
                     </li>
+                    <li>
+                        <div className="iconLiContact">
+                            <FaLocationDot size={26} role="presentation" />
+                        </div>
+                        <p aria-label="Ma mobilité en IDF"
+                        >
+                            <p className="typeContact">Mobilité</p>
+                            <p className="detailContact">dept: 78, 75, 92, 95</p>
+                        </p>
+                    </li>
                 </ul>
                 <div className="arrows">
                     <FaArrowCircleDown size={48} className="important" />
@@ -73,9 +83,9 @@ export default function ContactMe() {
                 <div className="whyMe">
                     <h3><FaLightbulb role="presentation" /> Pourquoi me choisir ?</h3>
                     <ul>
-                        <li><FaCheckCircle className="important" role="presentation" /> 20+ ans d’expérience en gestion de projets</li>
-                        <li><FaCheckCircle className="important" role="presentation" /> Compétences techniques solides</li>
-                        <li><FaCheckCircle className="important" role="presentation" /> Motivation et adaptabilité</li>
+                        <li><div className="whyMeCheck"><FaCheckCircle className="important" role="presentation" /></div> <p>20+ ans d’expérience en gestion de projets</p></li>
+                        <li><div className="whyMeCheck"><FaCheckCircle className="important" role="presentation" /></div> <p>Compétences techniques solides</p></li>
+                        <li><div className="whyMeCheck"><FaCheckCircle className="important" role="presentation" /></div> <p>Motivation et adaptabilité</p></li>
                     </ul>
                     <button
                         type="button"
@@ -94,7 +104,7 @@ export default function ContactMe() {
                             document.body.removeChild(link);
                         }}
                     >
-                        Télécharger mon CV <PiReadCvLogoFill size={20} aria-hidden="true" />
+                        Mon CV ici <PiReadCvLogoFill size={24} aria-hidden="true" />
                     </button>
 
                 </div>

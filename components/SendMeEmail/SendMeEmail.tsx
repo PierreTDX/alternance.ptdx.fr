@@ -53,7 +53,7 @@ export default function SendMeEmail() {
     return (
         <article className="articleSendMeEmail">
             <h2>
-                <IoIosSend className="iconContact" size={46} role="presentation" /> Envoyez-moi un message
+                <div><IoIosSend className="iconContact" size={46} role="presentation" /></div> Envoyez-moi un message
             </h2>
 
             {!sent ? (

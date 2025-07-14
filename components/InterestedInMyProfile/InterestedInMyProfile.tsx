@@ -12,7 +12,7 @@ export default function InterestedInMyProfile() {
             <div>
                 <h2 id="interested-in-my-profile">Intéressé par mon profil ?</h2>
                 <p>
-                    Discutons de votre prochain projet et de mes compétences en développement
+                    Discutons de votre prochain projet et de mes compétences en développement.
                 </p>
             </div>
 
