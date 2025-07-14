@@ -37,6 +37,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="fr" className={monaSans.variable}>
       <head>
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="theme-color" content="#1f1d1d" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         {/* Balise Google Analytics */}
         <Script
           async

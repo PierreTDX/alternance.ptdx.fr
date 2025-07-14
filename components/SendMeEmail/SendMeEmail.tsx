@@ -143,6 +143,7 @@ export default function SendMeEmail() {
                             placeholder="Jean Dupont"
                             value={formData.name}
                             onChange={handleChange}
+                            autoComplete="name"
                         />
                         {hasSubmitted && errors.name && (
                             <p id="name-error" className="error" role="alert">{errors.name}</p>
@@ -163,6 +164,7 @@ export default function SendMeEmail() {
                             placeholder="email@example.com"
                             value={formData.email}
                             onChange={handleChange}
+                            autoComplete="email"
                         />
                         {hasSubmitted && errors.email && (
                             <p id="email-error" className="error" role="alert">{errors.email}</p>
@@ -182,6 +184,7 @@ export default function SendMeEmail() {
                             placeholder="06 12 34 56 78"
                             value={formData.phone}
                             onChange={handleChange}
+                            autoComplete="tel"
                         />
                         {hasSubmitted && errors.phone && (
                             <p id="phone-error" className="error" role="alert">{errors.phone}</p>
