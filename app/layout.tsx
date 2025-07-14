@@ -28,7 +28,7 @@ const monaSans = localFont({
 });
 
 export const metadata = {
-  title: "Pierre Tondeux Dev Full Stack",
+  title: "Pierre Tondeux Développeur Full Stack",
   description:
     "Pierre TONDEUX, Développeur Full Stack motivé à rejoindre une équipe en alternance dans le cadre d’un Mastère Expert en Développement Full Stack. Technologies : React, Javascript, TypeScript, Node.js, NestJS. Disponible dès maintenant.",
 };
@@ -74,27 +74,52 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </Script>
 
         {/* schema.org */}
-        <Script type="application/ld+json" id="ld-json-person">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Person",
-            name: "Pierre Tondeux",
-            url: "https://alternance.ptdx.fr",
-            image: "https://alternance.ptdx.fr/images/alternanceptdx.png",
-            sameAs: [
-              "https://github.com/PierreTDX",
-              "https://www.linkedin.com/in/pierre-tondeux/"
-            ],
-            jobTitle: "Développeur Full Stack",
-            worksFor: {
-              "@type": "Organization",
-              name: "Freelance"
-            },
-            description:
-              "Développeur Full Stack en recherche d’une alternance dans le cadre d’un Mastère Expert en Développement Full Stack. Technologies : React, TypeScript, Node.js, NestJS.",
-            email: "mailto:pierre.tondeux@gmail.com"
-          })}
-        </Script>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "WebSite",
+                  "@id": "https://alternance.ptdx.fr#website",
+                  "url": "https://alternance.ptdx.fr",
+                  "name": "Pierre Tondeux Dev Full Stack",
+                  "inLanguage": "fr"
+                },
+                {
+                  "@type": "WebPage",
+                  "@id": "https://alternance.ptdx.fr#webpage",
+                  "url": "https://alternance.ptdx.fr",
+                  "name": "Accueil - Pierre Tondeux",
+                  "description": "Développeur Full Stack en recherche d’une alternance dans le cadre d’un Mastère Expert en Développement Full Stack. Technologies : React, TypeScript, Node.js, NestJS.",
+                  "inLanguage": "fr",
+                  "isPartOf": {
+                    "@id": "https://alternance.ptdx.fr#website"
+                  }
+                },
+                {
+                  "@type": "Person",
+                  "@id": "https://alternance.ptdx.fr#person",
+                  "name": "Pierre Tondeux",
+                  "url": "https://alternance.ptdx.fr",
+                  "image": "https://alternance.ptdx.fr/images/alternanceptdx.png",
+                  "sameAs": [
+                    "https://github.com/PierreTDX",
+                    "https://www.linkedin.com/in/pierre-tondeux/"
+                  ],
+                  "jobTitle": "Développeur Full Stack",
+                  "worksFor": {
+                    "@type": "Organization",
+                    "name": "Freelance"
+                  },
+                  "description": "Développeur Full Stack en recherche d’une alternance dans le cadre d’un Mastère Expert en Développement Full Stack. Technologies : React, TypeScript, Node.js, NestJS.",
+                  "email": "mailto:pierre.tondeux@gmail.com"
+                }
+              ]
+            }),
+          }}
+        ></script>
 
       </head>
       <body className="layout">
