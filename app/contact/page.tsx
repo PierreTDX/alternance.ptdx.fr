@@ -1,6 +1,6 @@
 import "./contact.scss";
 import ContactMe from "@/components/ContactMe/ContactMe";
-import SendMeEmail from "@/components/SendMeEmail/SendMeEmail";
+import SendMeEmail from "../../components/SendMeEmail/SendMeEmail";
 import ReadyToCollaborate from "@/components/ReadyToCollaborate/ReadyToCollaborate";
 
 export default function Contact() {
