@@ -38,7 +38,7 @@ export default function Header() {
     return (
         <header>
             <div className="headerContent" ref={menuRef}>
-                <AnimatedTitle />
+                <Link href="/"><AnimatedTitle /></Link>
 
                 <button
                     className={`burger ${menuOpen ? "open" : ""}`}

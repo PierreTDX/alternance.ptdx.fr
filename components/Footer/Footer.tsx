@@ -1,5 +1,7 @@
 import "./footer.scss";
 import Medias from "../Medias/Medias";
+import { FaCode } from "react-icons/fa";
+
 
 export default function Footer() {
     return (
@@ -9,7 +11,7 @@ export default function Footer() {
         >
             <div className="footerContent">
                 <p>
-                    &copy; {new Date().getFullYear()} Pierre Tondeux. Tous droits réservés.
+                    &copy; {new Date().getFullYear()} <FaCode className="important" /><span>ptdx</span>. Tous droits réservés.
                 </p>
                 <Medias />
             </div>
