@@ -5,7 +5,7 @@ export async function POST(request: Request) {
 
     try {
         const data = await request.json();
-        console.log('✅ Super données reçues :', data);
+        console.log('Données reçues :', data);
 
         const { name, email, phone, subject, message } = data;
 
@@ -43,7 +43,7 @@ export async function POST(request: Request) {
 
         if (!res1.ok) {
             const errorText = await res1.text();
-            console.error('❌ Erreur envoi à toi :', errorText);
+            console.error('Erreur envoi à toi :', errorText);
             return NextResponse.json({ error: 'Erreur lors de l’envoi du message.' }, { status: 500 });
         }
 
@@ -56,20 +56,20 @@ export async function POST(request: Request) {
             to: [{ email }],
             subject: 'Merci pour votre message !',
             htmlContent: `
-        <p>Bonjour ${name},</p>
-        <p>Merci pour votre message. Je l’ai bien reçu et je vous répondrai dans les plus brefs délais.</p>
-        <p>Voici un rappel de votre message :</p>
-        <blockquote style="border-left: 4px solid #ccc; padding-left: 1rem; color: #555;">
-            ${message.replace(/\n/g, '<br/>')}
-        </blockquote>
-        <p style="margin-top: 2rem;">Cordialement,</p>
-        <p><strong>Pierre Tondeux</strong><br/>
-        Développeur Full Stack en alternance<br/>
-        📱 06 64 19 94 27<br/>
-        📧 pierre.tondeux@gmail.com<br/>
-        🌐 <a href="https://alternance.ptdx.fr/">alternance.ptdx.fr</a>
-        </p>
-    `,
+                <p>Bonjour ${name},</p>
+                <p>Merci pour votre message. Je l’ai bien reçu et je vous répondrai dans les plus brefs délais.</p>
+                <p>Voici un rappel de votre message :</p>
+                <blockquote style="border-left: 4px solid #ccc; padding-left: 1rem; color: #555;">
+                    ${message.replace(/\n/g, '<br/>')}
+                </blockquote>
+                <p style="margin-top: 2rem;">Cordialement,</p>
+                <p><strong>Pierre Tondeux</strong><br/>
+                Développeur Full Stack en alternance<br/>
+                📱 06 64 19 94 27<br/>
+                📧 pierre.tondeux@gmail.com<br/>
+                🌐 <a href="https://alternance.ptdx.fr/">alternance.ptdx.fr</a>
+                </p>
+              `,
         };
 
         const res2 = await fetch('https://api.brevo.com/v3/smtp/email', {
@@ -80,7 +80,7 @@ export async function POST(request: Request) {
 
         if (!res2.ok) {
             const errorText = await res2.text();
-            console.error('❌ Erreur envoi au client :', errorText);
+            console.error('Erreur envoi au client :', errorText);
             // Pas besoin de bloquer si cette partie échoue
         }
 

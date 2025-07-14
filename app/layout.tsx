@@ -2,7 +2,7 @@ import "./../styles/globals.scss";
 import localFont from "next/font/local";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
-import Script from "next/script"; // ⬅️ ajoute ceci
+import Script from "next/script";
 
 // Déclaration de Mona Sans
 const monaSans = localFont({
@@ -30,7 +30,7 @@ const monaSans = localFont({
 export const metadata = {
   title: "Pierre Tondeux Dev Full Stack",
   description:
-    "Pierre TONDEUX recherche une alternance dans le cadre d'un Mastère Expert en Développement Full Stack",
+    "Pierre TONDEUX, Développeur Full Stack motivé à rejoindre une équipe en alternance dans le cadre d’un Mastère Expert en Développement Full Stack. Technologies : React, Javascript, TypeScript, Node.js, NestJS. Disponible dès maintenant.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -40,6 +40,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="icon" href="/favicon.ico" />
         <meta name="theme-color" content="#1f1d1d" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        {/* Balises Open Graph Facebook */}
+        <meta property="og:title" content="Pierre Tondeux Dev Full Stack" />
+        <meta property="og:description" content="Pierre TONDEUX, Développeur Full Stack motivé à rejoindre une équipe en alternance dans le cadre d’un Mastère Expert en Développement Full Stack. Technologies : React, Javascript, TypeScript, Node.js, NestJS. Disponible dès maintenant." />
+        <meta property="og:image" content="https://alternance.ptdx.fr/images/alternanceptdx.png" />
+        <meta property="og:url" content="https://alternance.ptdx.fr" />
+        <meta property="og:type" content="website" />
+
+        {/* Balises Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Pierre Tondeux Dev Full Stack" />
+        <meta name="twitter:description" content="Pierre TONDEUX, Développeur Full Stack motivé à rejoindre une équipe en alternance dans le cadre d’un Mastère Expert en Développement Full Stack. Technologies : React, Javascript, TypeScript, Node.js, NestJS. Disponible dès maintenant." />
+        <meta name="twitter:image" content="https://alternance.ptdx.fr/images/alternanceptdx.png" />
+
         {/* Balise Google Analytics */}
         <Script
           async
