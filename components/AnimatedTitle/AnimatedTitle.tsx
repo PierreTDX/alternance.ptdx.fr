@@ -34,7 +34,7 @@ export default function AnimatedTitle() {
     }, [showFull]);
 
     return (
-        <motion.h1
+        <motion.span
             className="siteTitle"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -43,6 +43,6 @@ export default function AnimatedTitle() {
             aria-level={1}
         >
             <FaCode color="#2dd4bf" aria-hidden="true" /> {text}
-        </motion.h1>
+        </motion.span>
     );
 }

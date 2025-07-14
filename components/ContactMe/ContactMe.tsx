@@ -67,11 +67,11 @@ export default function ContactMe() {
                         <div className="iconLiContact">
                             <FaLocationDot size={26} role="presentation" />
                         </div>
-                        <p aria-label="Ma mobilité en IDF"
+                        <div aria-label="Ma mobilité en IDF"
                         >
                             <p className="typeContact">Mobilité</p>
                             <p className="detailContact">dept: 78, 75, 92, 95</p>
-                        </p>
+                        </div>
                     </li>
                 </ul>
                 <div className="arrows">
