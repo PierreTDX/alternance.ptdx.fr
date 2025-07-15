@@ -18,7 +18,7 @@ export default function MyDiplomas() {
                         <HexagonShape number={1} className='hexagonShape' />
                     </div>
                     <div>
-                        <h3>Bachelor Concepteur Développeur d'Applications</h3>
+                        <h3>Bachelor Concepteur Développeur d’Applications</h3>
                         <p>2023</p>
                     </div>
                 </div>

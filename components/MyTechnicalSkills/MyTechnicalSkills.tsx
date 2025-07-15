@@ -10,7 +10,7 @@ export default function MyTechnicalSkills() {
         >
             <div>
                 <h2 id="my-technical-skills">Mes Compétences Techniques</h2>
-                <p>Mes technologies et outils que j'utilise</p>
+                <p>Mes technologies et outils que j’utilise</p>
             </div>
             <div className='technicalSkills'>
                 <div className='technicalSkillsContent'>
