@@ -13,8 +13,8 @@ export default function CardMe() {
             <Image
                 src="/images/pierre169.png"
                 alt="Portrait de Pierre Tondeux"
-                width={620}
-                height={345}
+                width={1400}
+                height={800}
                 priority
             />            <div className="cardMeContent">
                 <h3>Pierre Tondeux</h3>

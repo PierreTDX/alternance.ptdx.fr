@@ -39,8 +39,8 @@ export default function AnimatedTitle() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
-            aria-label="Nom du site : Pierre Tondeux à la recher d'une alternance"
-            aria-level={1}
+            aria-label="logo ptdx"
+
         >
             <FaCode color="#2dd4bf" aria-hidden="true" /> {text}
         </motion.span>

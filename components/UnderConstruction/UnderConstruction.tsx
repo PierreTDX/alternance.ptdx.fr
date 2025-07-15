@@ -11,7 +11,7 @@ export default function UnderConstruction() {
             aria-labelledby="under-construction"
         >
             <div>
-                <h2 id="under-construction">Site en construction</h2>
+                <h2 id="under-construction">Cette page est en construction</h2>
                 <p>
                     Ce n’est pas parce que ce n’est pas terminé qu’il ne faut pas le diffuser !
                 </p>

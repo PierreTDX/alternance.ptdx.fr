@@ -1,0 +1,45 @@
+.articleMyDiplomas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    justify-content: center;
+
+
+    h2 {
+        text-align: center;
+    }
+
+    .diplomas {
+        display: flex;
+        flex-direction: column;
+
+        .diplomasContent {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .articleMyDiplomas {
+        padding: 0.5rem;
+
+        .diplomas {
+            gap: 0.5rem;
+
+            .diplomasContent {
+
+                h3 {
+                    font-size: 1rem;
+                }
+
+                .hexagonShape {
+                    width: 60px;
+                    height: auto;
+                }
+            }
+        }
+    }
+}

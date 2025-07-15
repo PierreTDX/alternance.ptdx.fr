@@ -1,13 +1,17 @@
 import "./apropos.scss";
 import ReadyToCollaborateTogether from "@/components/ReadyToCollaborate/ReadyToCollaborateTogether";
-import UnderConstruction from "@/components/UnderConstruction/UnderConstruction";
+// import UnderConstruction from "@/components/UnderConstruction/UnderConstruction";
+import MyProfile from "@/components/MyProfile/MyProfile";
+import Retraining from "@/components/Retraining/Retraining";
+import MyTechnicalSkills from "@/components/MyTechnicalSkills/MyTechnicalSkills";
+import MyDiplomas from "@/components/MyDiplomas/MyDiplomas";
 
 export default function About() {
     return (
         <>
             <section className="headTitle">
                 <h1>
-                    À propos de <span className="important">moi</span>
+                    <span className="important">À propos</span> de moi
                 </h1>
                 <p>
                     Découvrez mon parcours de reconversion et ma passion pour le développement web
@@ -15,27 +19,27 @@ export default function About() {
             </section>
             <section className="myProfile">
                 <div className="sectionContent myProfileContent">
-                    MyProfile
+                    <MyProfile />
                 </div>
             </section>
             <section className="retraining">
                 <div className="sectionContent retrainingContent">
-                    Retraining
+                    <Retraining />
                 </div>
             </section>
-            <section className="myJourney">
+            {/* <section className="myJourney">
                 <div className="sectionContent myJourneyContent">
                     MyJourney
                 </div>
-            </section>
+            </section> */}
             <section className="myTechnicalSkills">
                 <div className="sectionContent myTechnicalSkillsContent">
-                    MyTechnicalSkills
+                    <MyTechnicalSkills />
                 </div>
             </section>
             <section className="myDiplomas">
                 <div className="sectionContent myDiplomasContent">
-                    MyDiplomas
+                    <MyDiplomas />
                 </div>
             </section>
             <section className="readyToCollaborateTogether">
@@ -43,14 +47,12 @@ export default function About() {
                     <ReadyToCollaborateTogether />
                 </div>
             </section>
-            <section>
 
-            </section>
-            <section className="underConstruction">
+            {/* <section className="underConstruction">
                 <div className="sectionContent underConstructionContent">
                     <UnderConstruction />
                 </div>
-            </section>
+            </section> */}
         </>
     );
 }

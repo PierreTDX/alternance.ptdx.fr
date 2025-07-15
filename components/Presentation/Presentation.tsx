@@ -20,7 +20,7 @@ export default function Presentation() {
             </div>
 
             <p>
-                Passionné par le développement web moderne, je transforme des idées en applications performantes et intuitives. 20 ans d’expérience en gestion de projets reconvertie en expertise technique.
+                Développeur full stack, je transforme des enjeux métiers en applications efficaces et ergonomiques. Mon expérience en gestion de projets me permet de structurer des solutions techniques solides et adaptées aux usages.
             </p>
 
             <div className="presentationAction">
