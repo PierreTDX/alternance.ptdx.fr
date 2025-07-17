@@ -172,7 +172,7 @@ export const projectsData: Project[] = [
         title: "CovoiTeam",
         slug: "covoiteam",
         description:
-            "Développement complet d’une application web et mobile de covoiturage extrascolaire en équipe agile. Conception UX/UI avec Figma et modélisation MongoDB. Front-end React responsive et mobile Ionic. Back-end évolutif en Nest.js avec microservices, gestion de projet via GitLab, YouTrack et tests automatisés.",
+            "Développement complet d’une application web et mobile de covoiturage extrascolaire en équipe agile chez <Alt/>. Conception UX/UI avec Figma et modélisation MongoDB. Front-end React responsive et mobile Ionic. Back-end évolutif en Nest.js avec microservices, gestion de projet via GitLab, YouTrack et tests automatisés.",
         image: "/images/Projects/covoiteam.png",
         tags: ["React", "Ionic", "Javascript", "Bootstrap", "Nest.js", "TypeScript", "NATS", "MongoDB", "GitLab", "Figma", "Excalidraw", "Draw.io", "YouTrack", "Cypress", "Postman"],
         github: "",
