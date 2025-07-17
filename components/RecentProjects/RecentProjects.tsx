@@ -5,7 +5,12 @@ import { projectsData } from "@/data/projectsData";
 import { FaArrowRight } from "react-icons/fa";
 
 export default function RecentProjects() {
-    const sortedProjects = [...projectsData]
+    // Filtrer pour exclure Alternance.ptdx
+    const filteredProjects = projectsData.filter(
+        project => project.slug !== "alternanceptdx"
+    );
+
+    const sortedProjects = [...filteredProjects]
         .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()) // tri décroissant
         .slice(0, 3); // prend les 3 premiers
 
