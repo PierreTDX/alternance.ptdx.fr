@@ -162,7 +162,7 @@ export const projectsData: Project[] = [
         description:
             "Site personnel développé avec Next.js pour présenter mon profil, mes projets et mon parcours. Design responsive, optimisations SEO et performance. Un formulaire de contact fonctionnel permet d’échanger directement, avec notifications automatiques via l’API Brevo. Hébergé sur Vercel avec nom de domaine personnalisé.",
         image: "/images/Projects/alternanceptdx.png",
-        tags: ["Next.js", "React", "Scss", "Vercel", "Brevo"],
+        tags: ["Next.js", "React", "TypeScript", "Scss", "Vercel", "Brevo"],
         github: "https://github.com/PierreTDX/alternance.ptdx.fr",
         site: "",
         date: "2025-07-15",
