@@ -4,14 +4,19 @@ import { FaArrowRight } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { PiStudentBold } from "react-icons/pi";
 import Medias from "../Medias/Medias";
+import MiniCountdown from "../Countdown/MiniCountdown";
 
 export default function Presentation() {
     return (
         <article className="presentation" aria-label="Présentation professionnelle">
-            <div className="tag" aria-live="polite">
-                <PiStudentBold aria-hidden="true" /> À la recherche d’une alternance
-            </div>
+            <div className="tagAndCounter">
+                <div className="tag" aria-live="polite">
+                    <PiStudentBold aria-hidden="true" /> À la recherche d’une alternance
+                </div>
 
+                <MiniCountdown />
+
+            </div>
             <div>
                 <h1>
                     Développeur <span className="important">Full Stack</span>

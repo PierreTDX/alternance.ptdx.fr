@@ -22,4 +22,10 @@
         flex: 1 1 auto;
     }
 
+    .tagAndCounter {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
 }

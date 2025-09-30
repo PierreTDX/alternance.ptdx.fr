@@ -24,6 +24,7 @@
         flex-direction: column;
         gap: 1rem;
         margin: 1rem;
+        flex: 1;
     }
 
     .cardImageWrapper {
@@ -75,6 +76,8 @@
         gap: 0.3rem;
         list-style: none;
         padding: 0;
+        justify-content: end;
+        margin-top: auto;
 
         .tag {
             font-size: 14px;

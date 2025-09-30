@@ -4,15 +4,21 @@ import { useEffect, useRef, useState } from "react";
 import "./countdown.scss";
 import { GoGear } from "react-icons/go";
 import { HiMiniChevronDoubleDown, HiMiniChevronDoubleUp } from "react-icons/hi2";
-
+import { useCountdownStore } from "@/app/store/useCountdownStore";
 
 export default function Countdown() {
-    const defaultStartDate = new Date(2025, 8, 26, 9, 0);
-    const defaultTargetDate = new Date(2025, 11, 25, 17, 0);
-
-    const [startDate, setStartDate] = useState(defaultStartDate);
-    const [targetDate, setTargetDate] = useState(defaultTargetDate);
     const [visible, setVisible] = useState(false);
+
+    const startRef = useRef<HTMLInputElement>(null);
+    const targetRef = useRef<HTMLInputElement>(null);
+
+    const {
+        startDate,
+        targetDate,
+        updateCountdown,
+        setStartDate,
+        setTargetDate,
+    } = useCountdownStore();
 
     const [display, setDisplay] = useState({
         days: 0,
@@ -21,9 +27,6 @@ export default function Countdown() {
         seconds: 0,
         milliseconds: 0,
     });
-
-    const startRef = useRef<HTMLInputElement>(null);
-    const targetRef = useRef<HTMLInputElement>(null);
 
     const setRingProgress = (id: string, percentage: number) => {
         const ring = document.querySelector<SVGCircleElement>(`#${id}`);
@@ -35,33 +38,39 @@ export default function Countdown() {
         ring.style.strokeDashoffset = `${offset}`;
     };
 
-    // Mise à jour des anneaux sauf ring1 (millisecondes)
+    // Mise à jour lente (jours, heures, minutes, secondes)
     const updateSlowRings = () => {
         if (!targetDate) return;
+
         const now = new Date();
         const diff = targetDate.getTime() - now.getTime();
+
         if (diff <= 0) {
             setDisplay({ days: 0, hours: 0, minutes: 0, seconds: 0, milliseconds: 0 });
             ["ring2", "ring3", "ring4", "ring5"].forEach((id) => setRingProgress(id, 0));
+            updateCountdown(); // remet store à 0
             return;
         }
 
-        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const daysCalc = Math.floor(diff / (1000 * 60 * 60 * 24));
         const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
-        setDisplay((prev) => ({ ...prev, days, hours, minutes, seconds }));
+        setDisplay((prev) => ({ ...prev, days: daysCalc, hours, minutes, seconds }));
 
-        const totalDays = Math.ceil((targetDate.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24));
+        // met à jour store
+        const total = Math.ceil((targetDate.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24));
+        updateCountdown();
 
-        setRingProgress("ring5", (days / totalDays) * 100);
+        // mise à jour des anneaux
+        setRingProgress("ring5", (daysCalc / total) * 100);
         setRingProgress("ring4", (hours / 24) * 100);
         setRingProgress("ring3", (minutes / 60) * 100);
         setRingProgress("ring2", (seconds / 60) * 100);
     };
 
-    // Mise à jour du ring1 (millisecondes) via requestAnimationFrame
+    // Mise à jour rapide (millisecondes)
     const updateFastRing = () => {
         if (!targetDate) return;
         const now = new Date();
@@ -78,10 +87,10 @@ export default function Countdown() {
 
     useEffect(() => {
         updateSlowRings();
-        const interval = setInterval(updateSlowRings, 100); // mise à jour lente
-        updateFastRing(); // animation fluide du ring1
+        const interval = setInterval(updateSlowRings, 100);
+        updateFastRing();
         return () => clearInterval(interval);
-    }, [targetDate, startDate]);
+    }, [startDate, targetDate]);
 
     const formatDateForInput = (date: Date) => {
         const offset = date.getTimezoneOffset();
@@ -109,23 +118,6 @@ export default function Countdown() {
                     <circle className="ring ring5-progress" id="ring5" cx="200" cy="200" r="180" />
                 </svg>
 
-                {/* <svg className="rings" width="400" height="400">
-                <circle className="ring ring-bg" cx="200" cy="200" r="180" />
-                <circle className="ring ring1-progress" id="ring1" cx="200" cy="200" r="180" />
-
-                <circle className="ring ring-bg" cx="200" cy="200" r="150" />
-                <circle className="ring ring2-progress" id="ring2" cx="200" cy="200" r="150" />
-
-                <circle className="ring ring-bg" cx="200" cy="200" r="120" />
-                <circle className="ring ring3-progress" id="ring3" cx="200" cy="200" r="120" />
-
-                <circle className="ring ring-bg" cx="200" cy="200" r="90" />
-                <circle className="ring ring4-progress" id="ring4" cx="200" cy="200" r="90" />
-
-                <circle className="ring ring-bg" cx="200" cy="200" r="60" />
-                <circle className="ring ring5-progress" id="ring5" cx="200" cy="200" r="60" />
-                </svg> */}
-
                 <div className="center-content">
                     <p className="day-label"><span className="J">J</span> -{display.days}</p>
                     <p className="time-remaining">{display.hours}h {display.minutes}min</p>
@@ -135,13 +127,16 @@ export default function Countdown() {
 
             <div className="controlsPanel">
                 <button className="noButton" onClick={() => setVisible(!visible)}>
-                    {visible ? <p><GoGear size={22} /> <HiMiniChevronDoubleUp /></p>
-                        : <p><GoGear size={22} /> <HiMiniChevronDoubleDown /></p>}
+                    {visible ? (
+                        <p><GoGear size={22} /> <HiMiniChevronDoubleUp /></p>
+                    ) : (
+                        <p><GoGear size={22} /> <HiMiniChevronDoubleDown /></p>
+                    )}
                 </button>
 
                 <div className={`controls ${visible ? "show" : "hide"}`}>
                     <label>
-                        Date de départ
+                        Date de début
                         <input
                             className="datetime"
                             type="datetime-local"
@@ -154,8 +149,8 @@ export default function Countdown() {
                         Date de fin
                         <input
                             className="datetime"
-                            type="datetime-local"
                             ref={targetRef}
+                            type="datetime-local"
                             value={formatDateForInput(targetDate)}
                             onChange={(e) => setTargetDate(new Date(e.target.value))}
                         />

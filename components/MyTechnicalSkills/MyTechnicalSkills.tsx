@@ -17,7 +17,7 @@ export default function MyTechnicalSkills() {
                     <h3><div className="iconTechnicalSkills"><FaReact size={24} role="presentation" /></div>Front-end</h3>
                     <ul className='technicalSkillsUl'>
                         <li>
-                            React
+                            React / Next.js
                         </li>
                         <li>
                             Redux

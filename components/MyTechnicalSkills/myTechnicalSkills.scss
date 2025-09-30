@@ -59,20 +59,26 @@
                     border-radius: 20px;
                     background-color: var(--importantBg);
                     color: var(--important);
+                    transition: scale 0.5s ease;
+                    cursor: default;
+
+                    &:hover {
+                        scale: 1.1;
+                    }
                 }
+
+            }
+        }
+
+    }
+
+    @media (max-width: 767px) {
+        .articleMyTechnicalSkills {
+            .technicalSkills {
+                flex-direction: column;
+                gap: 2rem;
             }
 
         }
-    }
-
-}
-
-@media (max-width: 767px) {
-    .articleMyTechnicalSkills {
-        .technicalSkills {
-            flex-direction: column;
-            gap: 2rem;
-        }
-
     }
 }
