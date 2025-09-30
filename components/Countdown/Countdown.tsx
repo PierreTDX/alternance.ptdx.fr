@@ -2,6 +2,9 @@
 
 import { useEffect, useRef, useState } from "react";
 import "./countdown.scss";
+import { GoGear } from "react-icons/go";
+import { HiMiniChevronDoubleDown, HiMiniChevronDoubleUp } from "react-icons/hi2";
+
 
 export default function Countdown() {
     const defaultStartDate = new Date(2025, 8, 26, 9, 0);
@@ -9,6 +12,7 @@ export default function Countdown() {
 
     const [startDate, setStartDate] = useState(defaultStartDate);
     const [targetDate, setTargetDate] = useState(defaultTargetDate);
+    const [visible, setVisible] = useState(false);
 
     const [display, setDisplay] = useState({
         days: 0,
@@ -86,63 +90,78 @@ export default function Countdown() {
     };
 
     return (
-        <div className="containerCountdown">
-            <svg className="rings" width="400" height="400">
-                <circle className="ring ring-bg" cx="200" cy="200" r="60" />
-                <circle className="ring ring1-progress" id="ring1" cx="200" cy="200" r="60" />
+        <>
+            <div className="containerCountdown">
+                <svg className="rings" width="400" height="400">
+                    <circle className="ring ring-bg" cx="200" cy="200" r="60" />
+                    <circle className="ring ring1-progress" id="ring1" cx="200" cy="200" r="60" />
 
-                <circle className="ring ring-bg" cx="200" cy="200" r="90" />
-                <circle className="ring ring-progress" id="ring2" cx="200" cy="200" r="90" />
+                    <circle className="ring ring-bg" cx="200" cy="200" r="90" />
+                    <circle className="ring ring2-progress" id="ring2" cx="200" cy="200" r="90" />
 
-                <circle className="ring ring-bg" cx="200" cy="200" r="120" />
-                <circle className="ring ring-progress" id="ring3" cx="200" cy="200" r="120" />
+                    <circle className="ring ring-bg" cx="200" cy="200" r="120" />
+                    <circle className="ring ring3-progress" id="ring3" cx="200" cy="200" r="120" />
 
-                <circle className="ring ring-bg" cx="200" cy="200" r="150" />
-                <circle className="ring ring-progress" id="ring4" cx="200" cy="200" r="150" />
+                    <circle className="ring ring-bg" cx="200" cy="200" r="150" />
+                    <circle className="ring ring4-progress" id="ring4" cx="200" cy="200" r="150" />
 
-                <circle className="ring ring-bg" cx="200" cy="200" r="180" />
-                <circle className="ring ring-progress" id="ring5" cx="200" cy="200" r="180" />
-            </svg>
+                    <circle className="ring ring-bg" cx="200" cy="200" r="180" />
+                    <circle className="ring ring5-progress" id="ring5" cx="200" cy="200" r="180" />
+                </svg>
 
-            {/* <svg className="rings" width="400" height="400">
+                {/* <svg className="rings" width="400" height="400">
                 <circle className="ring ring-bg" cx="200" cy="200" r="180" />
                 <circle className="ring ring1-progress" id="ring1" cx="200" cy="200" r="180" />
 
                 <circle className="ring ring-bg" cx="200" cy="200" r="150" />
-                <circle className="ring ring-progress" id="ring2" cx="200" cy="200" r="150" />
+                <circle className="ring ring2-progress" id="ring2" cx="200" cy="200" r="150" />
 
                 <circle className="ring ring-bg" cx="200" cy="200" r="120" />
-                <circle className="ring ring-progress" id="ring3" cx="200" cy="200" r="120" />
+                <circle className="ring ring3-progress" id="ring3" cx="200" cy="200" r="120" />
 
                 <circle className="ring ring-bg" cx="200" cy="200" r="90" />
-                <circle className="ring ring-progress" id="ring4" cx="200" cy="200" r="90" />
+                <circle className="ring ring4-progress" id="ring4" cx="200" cy="200" r="90" />
 
                 <circle className="ring ring-bg" cx="200" cy="200" r="60" />
-                <circle className="ring ring-progress" id="ring5" cx="200" cy="200" r="60" />
-            </svg> */}
+                <circle className="ring ring5-progress" id="ring5" cx="200" cy="200" r="60" />
+                </svg> */}
 
-            <div className="center-content">
-                <p className="day-label"><span className="J">J</span> -{display.days}</p>
-                <p className="time-remaining">{display.hours}h {display.minutes}min</p>
-                <p className="time-remaining">{display.seconds}.{display.milliseconds}s</p>
+                <div className="center-content">
+                    <p className="day-label"><span className="J">J</span> -{display.days}</p>
+                    <p className="time-remaining">{display.hours}h {display.minutes}min</p>
+                    <p className="time-remaining">{display.seconds}.{display.milliseconds}s</p>
+                </div>
             </div>
 
-            <div className="controls">
-                <input
-                    className="datetime"
-                    type="datetime-local"
-                    ref={startRef}
-                    value={formatDateForInput(startDate)}
-                    onChange={(e) => setStartDate(new Date(e.target.value))}
-                />
-                <input
-                    className="datetime"
-                    type="datetime-local"
-                    ref={targetRef}
-                    value={formatDateForInput(targetDate)}
-                    onChange={(e) => setTargetDate(new Date(e.target.value))}
-                />
+            <div className="controlsPanel">
+                <button className="noButton" onClick={() => setVisible(!visible)}>
+                    {visible ? <p><GoGear size={22} /> <HiMiniChevronDoubleUp /></p>
+                        : <p><GoGear size={22} /> <HiMiniChevronDoubleDown /></p>}
+                </button>
+
+                <div className={`controls ${visible ? "show" : "hide"}`}>
+                    <label>
+                        Date de départ
+                        <input
+                            className="datetime"
+                            type="datetime-local"
+                            ref={startRef}
+                            value={formatDateForInput(startDate)}
+                            onChange={(e) => setStartDate(new Date(e.target.value))}
+                        />
+                    </label>
+                    <label>
+                        Date de fin
+                        <input
+                            className="datetime"
+                            type="datetime-local"
+                            ref={targetRef}
+                            value={formatDateForInput(targetDate)}
+                            onChange={(e) => setTargetDate(new Date(e.target.value))}
+                        />
+                    </label>
+                </div>
             </div>
-        </div>
+        </>
     );
 }

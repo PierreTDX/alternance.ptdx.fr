@@ -1,7 +1,5 @@
 .containerCountdown {
     position: relative;
-    // width: 400px;
-    // height: 400px;
 }
 
 .rings {
@@ -11,21 +9,34 @@
 
 .ring {
     fill: none;
-    stroke-width: 20;
+    stroke-width: 18;
     stroke-linecap: round;
+    stroke: var(--important);
+    transition: stroke-dashoffset 0.5s ease;
 }
 
 .ring-bg {
     stroke: var(--importantBg);
 }
 
-.ring-progress {
-    stroke: var(--important);
-    transition: stroke-dashoffset 0.5s ease;
+.ring5-progress {
+    filter: brightness(1);
+}
+
+.ring4-progress {
+    filter: brightness(1.9);
+}
+
+.ring3-progress {
+    filter: brightness(2.8);
+}
+
+.ring2-progress {
+    filter: brightness(3.7);
 }
 
 .ring1-progress {
-    stroke: var(--important);
+    filter: brightness(4.6);
     transition: stroke-dashoffset 0.005s ease;
 }
 
@@ -60,11 +71,38 @@
     font-weight: 300;
 }
 
+.controlsPanel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    button {
+        align-self: flex-end;
+    }
+
+}
+
 .controls {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    display: none;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+
+    &.hide {
+        max-height: 0;
+        opacity: 0;
+    }
+
+    &.show {
+        opacity: 1;
+    }
+
+    label {
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+    }
 }
 
 .datetime {
@@ -74,7 +112,7 @@
     background-color: var(--title);
     border: 2px solid transparent;
     font-family: var(--font-mona);
-    width: 100%;
+    // width: 100%;
 
     &:focus-visible {
         outline: 5px solid var(--important);
@@ -83,7 +121,12 @@
     }
 }
 
-@media (max-width: 410px) {
+
+@media (max-width: 414px) {
+    .counter {
+        overflow: hidden;
+    }
+
     .rings {
         transform: rotate(-90deg) scaleY(-1) scale(0.7);
     }
@@ -91,5 +134,13 @@
     .center-content {
         top: 160px;
         transform: scale(0.7);
+    }
+
+    .controlsPanel {
+
+        button {
+            margin-right: 5rem;
+        }
+
     }
 }

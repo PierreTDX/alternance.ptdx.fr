@@ -114,6 +114,11 @@ button {
   }
 }
 
+.noButton {
+  all: unset;
+  cursor: pointer;
+}
+
 .tag {
   width: fit-content;
   padding: 0.5rem 1rem;
