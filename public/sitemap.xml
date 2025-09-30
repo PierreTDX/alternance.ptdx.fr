@@ -9,27 +9,32 @@
 
 <url>
   <loc>https://alternance.ptdx.fr/</loc>
-  <lastmod>2025-07-11T19:52:00+00:00</lastmod>
+  <lastmod>2025-09-29T19:52:00+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://alternance.ptdx.fr/apropos</loc>
-  <lastmod>2025-07-11T19:52:00+00:00</lastmod>
+  <lastmod>2025-09-29T19:52:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://alternance.ptdx.fr/projets</loc>
-  <lastmod>2025-07-11T19:52:00+00:00</lastmod>
+  <lastmod>2025-09-29T19:52:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://alternance.ptdx.fr/contact</loc>
-  <lastmod>2025-07-11T19:52:00+00:00</lastmod>
+  <lastmod>2025-09-29T19:52:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://alternance.ptdx.fr/compteur</loc>
+  <lastmod>2025-09-29T19:52:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://alternance.ptdx.fr/CV_Pierre_TONDEUX_DevFullStack.pdf</loc>
-  <lastmod>2025-07-11T19:52:00+00:00</lastmod>
+  <lastmod>2025-09-29T19:52:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 
