@@ -73,12 +73,12 @@
     }
 
     @media (max-width: 767px) {
-        .articleMyTechnicalSkills {
-            .technicalSkills {
-                flex-direction: column;
-                gap: 2rem;
-            }
 
+        .technicalSkills {
+            flex-direction: column;
+            gap: 2rem;
         }
+
+
     }
 }
